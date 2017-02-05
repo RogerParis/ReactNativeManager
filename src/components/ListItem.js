@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { Text, TouchableWithoutFeedback, View } from 'react-native';
-import { CardSection } from './common';
 import { Actions } from 'react-native-router-flux';
+import { CardSection } from './common';
 
 class ListItem extends Component {
-  onRowPress(){
-    Actions.employeeCreate({ employee: this.props.employee });
+  onRowPress() {
+    Actions.employeeEdit({ employee: this.props.employee });
   }
 
   render() {
@@ -21,7 +21,6 @@ class ListItem extends Component {
           </CardSection>
         </View>
       </TouchableWithoutFeedback>
-
     );
   }
 }
